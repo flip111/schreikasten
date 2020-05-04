@@ -1,0 +1,18 @@
+includes:
+  - phar://phpstan.phar/conf/bleedingEdge.neon
+  - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+  level: max
+  inferPrivatePropertyTypeFromConstructor: true
+  excludes_analyse:
+    - vendor/*
+    - templates
+  paths:
+    - .
+    - libs
+  autoload_files:
+    - cubepoints.php
+    - schreikasten.php
+    - uninstall.php
+  autoload_directories:
+    - libs

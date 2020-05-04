@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<psalm
+    totallyTyped="false"
+    errorLevel="7"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <file name="cubepoints.php" />
+        <file name="feed.php" />
+        <file name="schreikasten.php" />
+        <file name="uninstall.php" />
+        <directory name="libs" />
+        <ignoreFiles>
+            <directory name="vendor" />
+            <directory name="templates" />
+        </ignoreFiles>
+    </projectFiles>
+    <stubs>
+        <file name="vendor/php-stubs/wordpress-stubs/wordpress-stubs.php" />
+    </stubs>
+</psalm>

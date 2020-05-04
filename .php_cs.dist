@@ -1,0 +1,20 @@
+<?php
+
+// php-cs-fixer fix --allow-risky=yes
+
+$finder = PhpCsFixer\Finder::create()
+  ->in(__DIR__)
+  ->in(__DIR__ . '/libs')
+;
+
+return PhpCsFixer\Config::create()
+  ->setRules([
+    '@PhpCsFixer:risky' => true,
+    'braces' => ['position_after_functions_and_oop_constructs' => 'same'],
+    'binary_operator_spaces' => ['operators' => ['=' => 'single_space', '=>' => 'single_space']],
+    'array_syntax' => ['syntax' => 'short'],
+    'whitespace_after_comma_in_array' => true
+  ])
+  ->setFinder($finder)
+  ->setIndent('  ')
+;
